@@ -33,11 +33,11 @@ class HomeScreen extends StatelessWidget {
             actions: [
               CircleButton(icon: Icons.search,
                   iconSize: 30.0,
-                  onPressed: () => print('Search')
+                  onPressed: () => debugPrint('Search')
               ),
               CircleButton(icon: MdiIcons.facebookMessenger,
                   iconSize: 30.0,
-                  onPressed: () => print('Messenger')
+                  onPressed: () => debugPrint('Messenger')
               )
             ],
           ),
