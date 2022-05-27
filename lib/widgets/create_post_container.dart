@@ -1,7 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
-import '../models/user_model.dart';
+import 'package:flutter_facebook_clone_responsive/widgets/widgets.dart';
+import 'package:flutter_facebook_clone_responsive/models/models.dart';
 
 class CreatePostContainer extends StatelessWidget {
   final User currentUser;
@@ -14,17 +13,12 @@ class CreatePostContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.fromLTRB(12.0, 8.0, 12.0, 0.0),
-      color: Colors.orange,
+      color: Colors.white,
       child: Column(
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 20.0,
-                backgroundColor: Colors.grey[200],
-                backgroundImage:
-                    CachedNetworkImageProvider(currentUser.imageUrl),
-              ),
+              ProfileAvatar(imageUrl: currentUser.imageUrl),
               const SizedBox(width: 8.0),
               const Expanded(
                   child: TextField(
@@ -34,7 +28,7 @@ class CreatePostContainer extends StatelessWidget {
             ],
           ),
           const Divider(height: 10.0, thickness: 0.5),
-          Container(
+          SizedBox(
             height: 40.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
